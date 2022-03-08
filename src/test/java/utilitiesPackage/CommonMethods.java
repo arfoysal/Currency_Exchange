@@ -105,6 +105,15 @@ public class CommonMethods {
 		return false;
 	}
 	
+	public String itemSelectText(List<WebElement> elements) {
+		for (WebElement element : elements) {
+			if (element.isSelected()) {
+				return element.getText();
+			}
+		}
+		return "";
+	}
+	
 	/*************************************
 	 * Handle List elements Related Task * 
 	 * ***********************************

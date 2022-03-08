@@ -11,16 +11,17 @@ public class T001_BuyAndSell extends BaseDriver {
 
 	@Test()
 	public void buyAndSell() {
-
 		P001_Currency_Exchange currency_Exchange = new P001_Currency_Exchange();
-		
+
 		currency_Exchange.sell("100");
-		
+
 		assertEquals(currency_Exchange.buytext(), "");
-		
+
 		currency_Exchange.buy("200");
-		
+
 		assertEquals(currency_Exchange.selltext(), "");
+		
+		
 
 	}
 

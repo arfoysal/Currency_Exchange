@@ -21,26 +21,26 @@ public class BaseDriver {
 
 		String browser = System.getProperty("browser", "chrome");
 		switch (browser) {
-		case "chrome":
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
-			break;
-		case "opera":
-			WebDriverManager.operadriver().setup();
-			driver = new OperaDriver();
-			break;
-		case "firefox":
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
-			break;
-		default:
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
+			case "chrome":
+				WebDriverManager.chromedriver().setup();
+				driver = new ChromeDriver();
+				break;
+			case "opera":
+				WebDriverManager.operadriver().setup();
+				driver = new OperaDriver();
+				break;
+			case "firefox":
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver();
+				break;
+			default:
+				WebDriverManager.edgedriver().setup();
+				driver = new EdgeDriver();
 		}
 
 		driver.get("https://www.paysera.bg/v2/en-LT/fees/currency-conversion-calculator");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
 		PageDriver.getInstance().setDriver(driver);
 	}
 
