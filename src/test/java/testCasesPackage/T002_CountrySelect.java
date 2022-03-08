@@ -13,7 +13,7 @@ public class T002_CountrySelect extends BaseDriver {
 	@Test(dataProvider = "countryBasedCurrency", dataProviderClass = DataSet.class)
 	public void countrySelect(String countryName, String currencyName, String currencyRate) {
 		P001_Currency_Exchange currency_Exchange = new P001_Currency_Exchange();
-		
+
 		currency_Exchange.selectCountry(countryName);
 		currency_Exchange.waitForPageLoad();
 		assertEquals(currency_Exchange.currencyText(), currencyName);

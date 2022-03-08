@@ -20,8 +20,6 @@ public class T001_BuyAndSell extends BaseDriver {
 		currency_Exchange.buy("200");
 
 		assertEquals(currency_Exchange.selltext(), "");
-		
-		
 
 	}
 

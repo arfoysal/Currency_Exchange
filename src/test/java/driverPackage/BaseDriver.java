@@ -40,7 +40,7 @@ public class BaseDriver {
 
 		driver.get("https://www.paysera.bg/v2/en-LT/fees/currency-conversion-calculator");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		PageDriver.getInstance().setDriver(driver);
 	}
 
